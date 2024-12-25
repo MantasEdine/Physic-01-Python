@@ -29,4 +29,18 @@ mu = 1000  # Магнитная проницаемость магнетика
 # Вычисление
 B_inside = calculate_magnetic_induction(B, angle, mu)
 
+# Вывод решения
+print("Метод решения:")
+print("1. Разложение магнитной индукции на нормальную и тангенциальную составляющие:")
+print(f"   Угол = {angle}°, угол в радианах = {math.radians(angle):.2f} рад")
+print(f"   Нормальная составляющая: B_normal = B * cos(угол) = {B} * cos({math.radians(angle):.2f}) = {B * math.cos(math.radians(angle)):.4f} Тл")
+print(f"   Тангенциальная составляющая: B_tangential = B * sin(угол) = {B} * sin({math.radians(angle):.2f}) = {B * math.sin(math.radians(angle)):.4f} Тл")
+print("\n2. Вычисление индукции внутри магнетика:")
+print(f"   Нормальная составляющая внутри магнетика: B_normal_inside = B_normal / μ = {B * math.cos(math.radians(angle)):.4f} / {mu} = {B * math.cos(math.radians(angle)) / mu:.4f} Тл")
+print(f"   Тангенциальная составляющая внутри магнетика: B_tangential_inside = B_tangential = {B * math.sin(math.radians(angle)):.4f} Тл")
+print("\n3. Вычисление полного вектора индукции внутри магнетика:")
+print(f"   B_inside = sqrt(B_normal_inside² + B_tangential_inside²)")
+print(f"   B_inside = sqrt({(B * math.cos(math.radians(angle)) / mu)**2:.4e} + {(B * math.sin(math.radians(angle)))**2:.4e})")
+print(f"   B_inside = {math.sqrt((B * math.cos(math.radians(angle)) / mu)**2 + (B * math.sin(math.radians(angle)))**2):.4f} Тл")
+print("\nРезультат:")
 print(f"Магнитная индукция внутри магнетика: {B_inside:.4f} Тл")
