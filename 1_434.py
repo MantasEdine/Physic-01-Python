@@ -44,7 +44,7 @@ def relativistic_velocity(v_y_prime, v):
     gamma = 1 / math.sqrt(1 - v**2)  # Лоренц-фактор
 
     # Релятивистское преобразование скорости вдоль оси y
-    v_y = v_y_prime) / (gamma * (1 + 0))  # v_x' = 0, поэтому знаменатель упрощается
+    v_y = (v_y_prime) / (gamma * (1 + 0))  # v_x' = 0, поэтому знаменатель упрощается
 
     return v_y * c
 
@@ -62,7 +62,7 @@ def energy_per_unit_mass(v):
 
 # Данные задачи
 h_cm = 50  # Высота сосуда в см
-h = h_cm / 10)  # Перевод в метры
+h = (h_cm / 10)  # Перевод в метры
 
 # Расчёт оптимальной высоты и максимального расстояния
 h_optimal, d_max = calculate_max_distance_and_height(h)
@@ -76,8 +76,8 @@ print("\n3. максимальное расстояние полёта стру�
 print("\n3. Максимальное расстояние полёта струи):")
 print(f"   d_max = sqrt(h_optimal * (h - h_optimal) * 4 * h)")
 print(f"   d_max = sqrt({h_optimal:.2f} * ({h} - {h_optimal:.2f}) * 4 * {h})")
-print(f"   d_max = sqrt({h_optimal:.2f} * {h - h_optimal) * 4 * h)")
-print(f"   d_max = sqrt({h_optimal * (h - h_optimal) * 4 * h):.2f}")
+print(f"   d_max = sqrt({h_optimal:.2f} * {h - h_optimal * 4 * h}")
+print(f"   d_max = sqrt({h_optimal * (h - h_optimal) * 4 * h:.2f}")
 print(f"   d_max = {math.sqrt(h_optimal * (h_optimal) * 4 * h):.2f} м")
 print("\nРезультат:")
 print(f"Оптимальная высота отверстия: {h_optimal:.2f} м")
@@ -115,7 +115,7 @@ print(f"1. Лоренц-фактор (gamma):")
 print(f"   gamma = 1 / sqrt(1 - v^2) = 1 / sqrt(1 - {v}^2) = {1 / math.sqrt(1 - v**2):.2f}")
 print(f"2. Релятивистское преобразование скорости вдоль оси y:")
 print(f"   v_y = v_y_prime / (gamma * (1 + 0)) = {v_y_prime} / ({1 / math.sqrt(1 - v**2):.2f} * 1)")
-print(f"   v_y = {v_y_prime / (1 / math.sqrt(1 - v**2):.2f}")
+print(f"   v_y = {v_y_prime / (1 / math.sqrt(1 - v**2)):.2f}")
 print(f"   v_y = {v_y_prime / (1 / math.sqrt(1 - v**2)):.2f}")
 print(f"3. Скорость частицы в системе K:")
 print(f"   v_y_k = v_y * c = {v_y_prime / (1 / math.sqrt(1 - v**2)):.2f} * 3e8")
